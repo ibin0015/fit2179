@@ -4,7 +4,7 @@
   "width": 220,
   "height": 100,
   "data": {
-    "url": "Data/archive2/index_1.csv"
+    "url": "Data/favourite_coffee.csv"
   },
   "transform": [
     {
