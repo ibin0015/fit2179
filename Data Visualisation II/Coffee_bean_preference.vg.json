@@ -4,7 +4,7 @@
     "text": "Preferred Coffee Bean Types by Domestic Consumption"
   },
   "data": {
-    "url": "Data/Coffee_bean/Coffee_domestic_consumption.csv"
+    "url": "Data/Coffee_domestic_consumption.csv"
   },
   "transform": [
     {
