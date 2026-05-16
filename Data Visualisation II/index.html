@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+        integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="style.css" media="all">
+
+    <title>Coffee Consumption Dashboard</title>
+</head>
+
+<body>
+    <div class="page">
+
+        <!-- Title -->
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <h1 class="page-title">Coffee Culture around the World</h1>
+            </div>
+        </div>
+
+          <!-- Image section: 4 equal columns -->
+        <div class="pure-g">
+            <!-- Column 1: heading + image + source -->
+            <div class="pure-u-1-4">
+                <img src="Data/coffee.jpeg" alt="Coffee beans spilling from a burlap sack"
+                    style="width: 90%; height: 200px; object-fit: cover;margin-top: 20px;">
+                <p class="small-font">
+                    Image source: <a href="https://www.nescafe.com/au/coffee-culture/knowledge/coffee-beans"
+                    target="_blank">Nescafé Australia</a>
+                </p>
+            </div>
+            <!-- Column 2: text pushed down to align with image -->
+            <div class="pure-u-1-4">
+                <div style="margin-bottom: 20px;">
+                    <h2>How it all started?</h2>
+                    <p style="text-align: justify;">Coffee originated in Ethiopia around 800 AD, spreading across Arabia, Persia, 
+                        and Europe by the 17th century. The world's first coffee house opened in Constantinople in 1475, making 
+                        coffee a global social staple. Today, Latin American nations led by Brazil dominate global production (Nescafé, 2023).</p>
+                </div>
+            </div>
+            <!-- Column 3: chart -->
+            <div class="pure-u-1-2">
+                <div id="lollipop_chart" class="vis-container"></div>
+            </div>
+        </div>
+
+
+        <!-- Section 1: Description left, bar chart right -->
+        <div class="pure-g">
+            <div class="pure-u-1-2">
+                <div class="description description-left">
+                    <h2>Top 10 Coffee Bean Exporters 2025</h2>
+                    <p>Brazil leads global green coffee bean exports in 2025 with 37,000 thousand 60 kg bags, 
+                    representing around 31% of total exports. Vietnam follows strongly in second place with 
+                    24,600 thousand bags, while Colombia ranks third at 11,500 thousand bags.</p>
+                    <p>Together, the top three exporters account for nearly 62% of all global bean exports, 
+                    reflecting a continued concentration among a small number of producing nations. Indonesia 
+                    rises notably to fourth place in 2025, with African exporters Ethiopia and Uganda rounding out the top six.</p>
+                </div>
+            </div>
+            <div class="pure-u-1-2">
+                <div id="bar_chart2" class="vis-container"></div>
+            </div>
+        </div>
+
+        <!-- Section 2: Choropleth map (full width) -->
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <div id="choropleth_map" class="vis-container"></div>
+            </div>
+        </div>
+
+        <!-- Section 3: Second bar chart (full width) -->
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <div id="bar_chart" class="vis-container"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="vega_lite_vis.js"></script>
+</body>
+
+</html>

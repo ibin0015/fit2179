@@ -1,0 +1,50 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": { "text": "Favorite Coffee Types" },
+  "width": 220,
+  "height": 100,
+  "data": {
+    "url": "Data/archive2/index_1.csv"
+  },
+  "transform": [
+    {
+      "calculate": "indexof(['Espresso','Americano','Americano with Milk','Latte','Cappuccino','Cortado'], datum.coffee_name) >= 0 ? datum.coffee_name : 'Others'",
+      "as": "coffee_category"
+    },
+    {
+      "aggregate": [{ "op": "count", "as": "count" }],
+      "groupby": ["coffee_category"]
+    },
+    {
+      "joinaggregate": [{ "op": "sum", "field": "count", "as": "total" }]
+    },
+    {
+      "calculate": "datum.count / datum.total",
+      "as": "percentage"
+    },
+    {
+      "calculate": "datum.coffee_category === 'Others' ? 0 : datum.percentage",
+      "as": "sort_order"
+    }
+  ],
+  "mark": { "type": "bar", "tooltip": true },
+  "encoding": {
+    "x": {
+      "field": "coffee_category",
+      "type": "nominal",
+      "title": "Type of Coffee",
+      "sort": { "field": "sort_order", "order": "descending" }
+    },
+    "y": {
+      "field": "percentage",
+      "type": "quantitative",
+      "title": "Percentage of Orders",
+      "axis": { "format": ".0%" }
+    },
+    "tooltip": [
+      { "field": "coffee_category", "title": "Coffee" },
+      { "field": "count", "title": "Orders" },
+      { "field": "percentage", "title": "Share", "format": ".1%" }
+    ]
+  }
+}
