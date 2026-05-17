@@ -37,7 +37,7 @@
             <!-- Column 1: heading + image + source -->
             <div class="pure-u-1-4">
                 <img src="Data/coffee.jpeg" alt="Coffee beans spilling from a burlap sack"
-                    style="width: 90%; height: 200px; object-fit: cover;margin-top: 20px;">
+                    style="width: 85%; height: 220px; object-fit: cover;margin-top: 20px;">
                 <p class="small-font">
                     Image source: <a href="https://www.nescafe.com/au/coffee-culture/knowledge/coffee-beans"
                     target="_blank">Nescafé Australia</a>
@@ -45,7 +45,7 @@
             </div>
             <!-- Column 2: text pushed down to align with image -->
             <div class="pure-u-1-4">
-                <div style="margin-bottom: 20px;">
+                <div style="margin-bottom: 20px; padding-right: 23px;">
                     <h2>How it all started?</h2>
                     <p style="text-align: justify;">Coffee originated in Ethiopia around 800 AD, spreading across Arabia, Persia, 
                         and Europe by the 17th century. The world's first coffee house opened in Constantinople in 1475, making 
@@ -55,11 +55,19 @@
             <!-- Column 3: chart -->
             <div class="pure-u-1-2">
                 <div id="lollipop_chart" class="vis-container"></div>
+                <p style="text-align: justify;"></p>
+            </div>
+        </div>
+
+        <!-- Section 2: Second bar chart (full width) -->
+        <div class="pure-g">
+            <div class="pure-u-2-3">
+                <div id="bar_chart" class="vis-container"></div>
             </div>
         </div>
 
 
-        <!-- Section 1: Description left, bar chart right -->
+        <!-- Section 3: Description left, bar chart right -->
         <div class="pure-g">
             <div class="pure-u-1-2">
                 <div class="description description-left">
@@ -77,19 +85,13 @@
             </div>
         </div>
 
-        <!-- Section 2: Choropleth map (full width) -->
+        <!-- Section 4: Choropleth map (full width) -->
         <div class="pure-g">
             <div class="pure-u-1-1">
                 <div id="choropleth_map" class="vis-container"></div>
             </div>
         </div>
 
-        <!-- Section 3: Second bar chart (full width) -->
-        <div class="pure-g">
-            <div class="pure-u-1-1">
-                <div id="bar_chart" class="vis-container"></div>
-            </div>
-        </div>
 
     </div>
 
