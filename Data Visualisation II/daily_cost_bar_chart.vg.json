@@ -27,7 +27,7 @@
       "as": "sort_order"
     }
   ],
-  "mark": { "type": "bar", "tooltip": true },
+  "mark": { "type": "bar","color": "#A0522D", "tooltip": true },
   "encoding": {
     "x": {
       "field": "coffee_category",
