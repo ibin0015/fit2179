@@ -27,8 +27,7 @@
   ],
   "mark": {
     "type": "bar",
-    "tooltip": true,
-    "color": "#A0522D"
+    "tooltip": true
   },
   "encoding": {
     "y": {
