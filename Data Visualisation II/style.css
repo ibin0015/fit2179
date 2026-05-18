@@ -12,7 +12,7 @@ body {
 
 .page {
     width: 1000px;
-    background-color: #fdf6ec;
+    background-color: #eeca98;
     margin: auto;
     padding: 50px;
     padding-top: 35px;
@@ -20,6 +20,11 @@ body {
 
 .page-title {
     text-align: center;
+}
+
+.page-title ~ img {
+    width: 100%;
+    display: block;
 }
 
 .vis-container {
