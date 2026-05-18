@@ -3,6 +3,7 @@
   "title": {
     "text": "Top 10 Coffee Bean Exporters 2025"
   },
+  "width": 380,
   "data": {
     "url": "Data/CoffeeBeanExports_2025.csv"
   },
@@ -27,6 +28,7 @@
   "mark": {
     "type": "bar",
     "tooltip": true
+    "color": "#A0522D"
   },
   "encoding": {
     "y": {
